@@ -5,19 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>kalb-i kelâm</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      background: url('https://r.resimlink.com/JQKxHyPdV.jpg') no-repeat center center fixed;
-      background-size: cover;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
       font-family: 'Georgia', serif;
       color: #4b2e2e;
-      overflow-x: hidden;
+    }
+    body {
+      background: url('https://r.resimlink.com/JQKxHyPdV.jpg') no-repeat center center fixed;
+      background-size: contain; /* Görseli ekranın içine sığdırır */
+      background-color: #fff0f5; /* Görselin dışında kalan alanlar için */
     }
     .overlay {
       background: rgba(255, 255, 255, 0.75);
-      min-height: 100vh;
-      padding: 2rem;
+      min-height: 100%;
+      padding: 2rem 1rem;
     }
     .container {
       max-width: 600px;
@@ -25,7 +31,7 @@
     }
     h1 {
       text-align: center;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       margin-bottom: 1rem;
     }
     .poem {
